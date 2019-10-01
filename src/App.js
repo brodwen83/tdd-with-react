@@ -1,7 +1,13 @@
 import React from 'react';
 
-function App() {
-  return <div className="hello">Hello, world!</div>;
+class App extends React.Component {
+  state = { name: 'viewers' };
+
+  render() {
+    const { name } = this.state;
+
+    return <div className="hello">Hello, {name}!</div>;
+  }
 }
 
 export default App;
