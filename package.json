@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html",
     "e2e": "cypress open",
-    "unit:test": "jest test/**/*.spec.js"
+    "unit:test": "jest test/**/*.spec.js",
+    "lint": "eslint cypress/integration/**/*.js src/**/*.js test/**/*.js"
   },
   "author": "Wendell Encorporado",
   "license": "ISC",
@@ -25,6 +26,8 @@
     "eslint": "^6.5.0",
     "eslint-config-codingitwrong": "^0.1.4",
     "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-cypress": "^2.7.0",
+    "eslint-plugin-jest": "^22.17.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
     "jest": "^24.9.0",
