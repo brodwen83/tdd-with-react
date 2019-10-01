@@ -6,6 +6,8 @@ describe('App', () => {
   it('renders Hello, world', () => {
     const wrapper = mount(<App />);
 
-    expect(wrapper.find('.hello').text()).toContain('Hello, world!');
+    expect(wrapper.find('.hello').text()).toContain(
+      'Hello, viewers!',
+    );
   });
 });

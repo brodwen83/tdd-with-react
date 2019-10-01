@@ -3,13 +3,11 @@
     "browser": true,
     "es6": true,
     "jest": true,
-    "cypress/globals": true,
     "jest/globals": true
   },
   "globals": {
     "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly",
-    "cy": true
+    "SharedArrayBuffer": "readonly"
   },
   "parserOptions": {
     "ecmaFeatures": {
@@ -19,11 +17,11 @@
     "sourceType": "module"
   },
   "extends": [
-    "codingitwrong",
     "prettier",
+    "codingitwrong",
     "plugin:cypress/recommended"
   ],
-  "plugins": ["prettier", "cypress", "jest", "react"],
+  "plugins": ["prettier", "react", "jest"],
   "rules": {
     "prettier/prettier": ["error"]
   },
