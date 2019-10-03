@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 
-function NewRestaurantForm(props) {
+function NewRestaurantForm({ onSave }) {
   const [textInput, setTextInput] = useState('');
 
-  const handleTextinputChange = event => {
-    setTextInput(event.target.value);
+  const handleTextinputChange = ({ target: { value } }) => {
+    setTextInput(value);
   };
 
-  const handleOnSave = () => {
-    const { onSave } = props;
+  const handleOnSave = event => {
+    event.preventDefault();
 
     onSave(textInput);
+    setTextInput('');
   };
 
   return (
-    <div>
+    <form onSubmit={handleOnSave}>
       <input
         type="text"
         value={textInput}
@@ -24,10 +25,11 @@ function NewRestaurantForm(props) {
       <button
         data-test="saveNewRestaurantButton"
         onClick={handleOnSave}
+        type="submit"
       >
         Save
       </button>
-    </div>
+    </form>
   );
 }
 
