@@ -37,8 +37,10 @@
   },
   "dependencies": {
     "@types/jest": "^24.0.18",
+    "materialize-css": "^1.0.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
+    "react-materialize": "^3.4.1",
     "trace_events": "0.0.1"
   },
   "jest": {
