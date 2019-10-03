@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import NewRestaurantForm from './forms/NewRestaurantForm';
 import RestaurantList from './RestaurantList';
+import { Button } from 'react-materialize';
 
 function RestaurantPage() {
   const [restaurants, setRestaurants] = useState([]);
@@ -10,20 +11,21 @@ function RestaurantPage() {
 
   const handleAddRestaurant = restaurant => {
     setRestaurants([...restaurants, restaurant]);
+    setShowNewRestaurantForm(false);
   };
 
   const handleShowNewRestaurantForm = () => {
-    setShowNewRestaurantForm(!showNewRestaurantForm);
+    setShowNewRestaurantForm(true);
   };
 
   return (
     <div>
-      <button
+      <Button
         data-test="addRestaurantButton"
         onClick={handleShowNewRestaurantForm}
       >
         Add Restaurant
-      </button>
+      </Button>
 
       {showNewRestaurantForm && (
         <NewRestaurantForm onSave={handleAddRestaurant} />

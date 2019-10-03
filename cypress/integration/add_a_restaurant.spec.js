@@ -14,6 +14,8 @@ describe('adding resstaurant', () => {
 
     cy.get('[data-test="saveNewRestaurantButton"]').click();
 
+    cy.get('[data-test="newRestaurantName"]').should('not.exist');
+
     cy.contains(restaurantName);
   });
 });

@@ -12,11 +12,11 @@ describe('NewRestaurantForm', () => {
       );
 
       wrapper
-        .find('[data-test="newRestaurantName"]')
+        .find('input[data-test="newRestaurantName"]')
         .simulate('change', { target: { value: 'Sushi Place' } });
 
       wrapper
-        .find('[data-test="saveNewRestaurantButton"]')
+        .find('button[data-test="saveNewRestaurantButton"]')
         .simulate('click');
 
       expect(saveHandler).toHaveBeenCalledWith('Sushi Place');
