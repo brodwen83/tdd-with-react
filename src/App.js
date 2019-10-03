@@ -1,16 +1,11 @@
 import React from 'react';
-import Name from './components/Name';
+import { RestaurantPage } from './containers/restaurant';
 
 class App extends React.Component {
-  state = { name: 'viewers' };
-
   render() {
-    const { name } = this.state;
-
     return (
-      <div className="hello">
-        Hello, {name}!
-        <Name />
+      <div>
+        <RestaurantPage />
       </div>
     );
   }
